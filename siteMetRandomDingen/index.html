@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> Page title </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="pets.html">Pets</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="nugs.html">Plants</a>
+                </div>
+                
+                <div class="nav-link-wrapper">
+                    <a href="nugs.html">Nugs</a>
+                </div>
+            </div>
+            
+            <div class="right-side">
+                <div class="brand">
+                    <div>Random Stuff</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="hp-items-wrapper">
+                
+                <div class="hp-item-wrapper">
+                    <div class="hp-img-background" style="background-image: url(https://images.unsplash.com/photo-1590394072807-12f9869e3907?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.allrecipes.com/recipes/276/desserts/cakes/">
+                                <img src="images/logos/bakingIcon.png" width="150" height="150">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Bake a cake
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-item-wrapper">
+                    <div class="hp-img-background" style="background-image: url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.allrecipes.com/recipes/1642/everyday-cooking/"><img src="images/logos/cookingIcon.png" width="150" height="150"></a>
+                        </div>
+
+                        <div class="subtitle">
+                            Cooking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-item-wrapper">
+                    <div class="hp-img-background" style="background-image: url(https://images.unsplash.com/photo-1517400508447-f8dd518b86db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.trivago.nl/">
+                                <img src="images/logos/travelIcon.png" width="150" height="150">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Travel
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-item-wrapper">
+                    <div class="hp-img-background" style="background-image: url(images/ChumAndBill.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="pets.html">
+                                <img src="images/logos/pawIcon.png" width="150" height="150">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Pets
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-item-wrapper">
+                    <div class="hp-img-background" style="background-image: url(https://images.unsplash.com/photo-1597075941308-6215ddcf6c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)" alt=""></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.fitsociety.nl/fitness-oefeningen/">
+                                <img src="images/logos/gymIcon.png" width="150" height="150">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Gym
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-item-wrapper">
+                    <div class="hp-img-background" style="background-image: url(https://images.unsplash.com/photo-1605764526690-5df0082d7321?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80)" alt=""></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="https://www.leafly.com/">
+                                <img src="images/logos/loveIcon.png" width="150" height="150">
+                            </a>
+                        </div>
+
+                        <div class="subtitle">
+                            Chillings
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="white-space"></div>
+    <div class="footer">
+        <div class="footer-text">
+            <p>Image together is give divided living.</p>
+            <p>Doesn&#39;t had together a darkness. Day seasons moved wherein there.</p>
+            <p>And over his grass.</p>
+        </div>
+    </div>
+</body>
+<script>
+    const items = document.querySelectorAll('.portfolio-item-wrapper')
+
+    items.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+</html>

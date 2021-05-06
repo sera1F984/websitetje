@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> Pets </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="pets.html">Pets</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="plants.html">Plants</a>
+                </div>
+                
+                <div class="nav-link-wrapper">
+                    <a href="nugs.html">Nugs</a>
+                </div>
+            </div>
+            
+            <div class="right-side">
+                <div class="brand">
+                    <div>Random Stuff</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner" style="background-image: url(images/pets/chumOnTheCouch.jpg)">
+        </div>
+        
+
+        <section class="content-wrapper"> 
+            <div class="two-column-wrapper">
+                <div id="slideshow-pets" data-component="slideshow">
+                    <div role="list">
+                        <div class="petslide">
+                            <img src="images/pets/billyEnLandschap.jpg" alt="">
+                        </div>
+                        <div class="petslide">
+                            <img src="images/pets/chumAndMe.jpg" alt="">
+                        </div>
+                        <div class="petslide">
+                            <img src="images/pets/chumOnTheCouch.jpg" alt="">
+                        </div>
+                        <div class="petslide">
+                            <img src="images/pets/sleepingBill.jpg" alt="">
+                        </div>
+                        <div class="petslide">
+                            <img src="images/pets/chumOnFrank.jpg" alt="">
+                        </div>
+                        <div class="petslide">
+                            <img src="images/pets/chumAndPet.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-content-wrapper">
+                    <h1>Testing text</h1>
+                    
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
+                            nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat 
+                            massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+                            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
+                            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. 
+                            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                        </p>
+                    </div>
+                </div>
+
+            </div>        
+        </section>
+    </div>
+    
+    <div class="white-space"></div>
+    
+    <div class="footer">
+        <div class="footer-text">
+            <p>Seasons. Made wherein made.</p>
+            <p>Made. Spirit set dominion.</p>
+            <p>Place shall.</p>
+        </div>
+    </div>
+    <div class="heart"></div>
+</body>
+
+<script>
+    var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+    slideshows.forEach(initSlideShow);
+
+    function initSlideShow(slideshow) {
+
+	    var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .petslide`);
+
+	    var index = 0, time = 5000;
+	    slides[index].classList.add('active');
+
+	    setInterval( () => {
+		    slides[index].classList.remove('active');
+		
+		    index++;
+		    if (index === slides.length) index = 0;
+
+		    slides[index].classList.add('active');
+
+	    }, time);
+    }
+</script>
+
+</html>
